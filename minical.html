@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini calculator</title>
+</head>
+<body>
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+
+    <h2 id="result"></h2>
+
+    <button onclick="add()" id="add">Add</button>
+    <button onclick="mult()" id="Mult">Multiply</button>
+    <button onclick="sub()" id="Sub">Subtract</button>
+    <button onclick="div()" id="Div">Divide</button>
+
+
+
+</body>
+<script>
+
+function add(){
+    let inp1=document.getElementById("number1").value
+    let inp2=document.getElementById("number2").value
+
+    let res=Number(inp1)+Number(inp2)
+    // document.getElementById("result").innerText=res
+
+    alert(res)
+
+}
+
+function mult(){
+
+    let inp1=document.getElementById("number1").value
+    let inp2=document.getElementById("number2").value
+
+    let res=Number(inp1)*Number(inp2)
+    alert(res)
+}
+
+
+function sub(){
+
+    let inp1=document.getElementById("number1").value
+    let inp2=document.getElementById("number2").value
+
+    let res=Number(inp1)-Number(inp2)
+    alert(res)
+}
+
+function div(){
+
+    let num1=document.getElementById("number1").value
+    let num2=document.getElementById("number2").value
+
+    let res=Number(num1)/Number(num2)
+
+    alert(res)
+}
+
+
+
+</script>
+</html>

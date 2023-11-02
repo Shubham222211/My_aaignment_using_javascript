@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #score-box {
+            width: 100px;
+            text-align: center;
+            font-size: 24px;
+            border: 1px solid #000;
+            margin: 10px;
+        }
+
+        #buttons {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Leaderboard</h1>
+        <div id="score-box"></div>
+        <div id="buttons">
+            <button onclick="addToScore(1)">1</button>
+            <button onclick="addToScore(2)">2</button>
+            <button onclick="addToScore(3)">3</button>
+            <button onclick="addToScore(4)">4</button>
+            <button onclick="addToScore(5)">5</button>
+            <button onclick="addToScore(6)">6</button>
+            <button onclick="addToScore(7)">7</button>
+            <button onclick="addToScore(8)">8</button>
+            <button onclick="addToScore(9)">9</button>
+            <button onclick="resetScore()">RESET</button>
+            <button onclick="updateMinMax()">ENTER</button>
+        </div>
+        <div>
+            <label>MIN:</label> <span id="min-score">0</span>
+        </div>
+        <div>
+            <label>MAX:</label> <span id="max-score">0</span>
+        </div>
+    </div>
+
+    <script>
+        let currentScore = "";
+        let minScore = 0;
+        let maxScore = 0;
+
+        function addToScore(number) {
+            currentScore += number;
+            updateScoreBox();
+        }
+
+        function resetScore() {
+            currentScore = "";
+            updateScoreBox();
+        }
+
+        function updateScoreBox() {
+            document.getElementById("score-box").textContent = currentScore;
+        }
+
+        function updateMinMax() {
+            let score = parseInt(currentScore);
+
+            if (score < minScore || minScore === 0) {
+                minScore = score;
+                document.getElementById("min-score").textContent = minScore;
+            }
+            if (score > maxScore) {
+                maxScore = score;
+                document.getElementById("max-score").textContent = maxScore;
+            }
+
+            resetScore();
+        }
+    </script>
+</body>
+</html>

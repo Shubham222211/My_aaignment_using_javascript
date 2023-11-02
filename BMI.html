@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculate BMI</title>
+</head>
+<body>
+
+    <h1>CHECK YOUR BMI</h1>
+    <H3>Enter your weight and height below to check your BMI result</H3>
+    
+    <input type="number" name="weight" id="inp1" text="weight">
+    <input type="number" name="height" id="inp2" text="Height">
+
+    <button id="btn" onclick="cal()">CALCULATE BMI</button>
+
+    <h1 id="display"></h1>
+    <h1 id="underweight"></h1>
+    <h1i id="normal weight"></h1>
+    <h1 id="overweight"></h1>
+    <h1 id="obese"></h1>
+</body>
+
+<script>
+
+    function cal(){
+let input1=document.getElementById("inp1").value
+let input2=document.getElementById("inp2").value/100
+
+let cal=input1/((input2)*(input2))
+let ans=cal
+// document.getElementById("display").innerText=ans
+
+let bag1=ans+" "+"which means you are under weight"
+let bag2=ans+" "+"which means you are Normal weight"
+let bag3=ans+" "+"which means you are Overweight weight"
+let bag4=ans+" "+"which means you are Obese weight"
+
+if(ans<=18.4){
+document.getElementById("display").innerText=bag1
+}
+else if(ans>=18.5 && ans<=24.9){
+    document.getElementById("display").innerText=bag2
+
+}
+else if(ans>=25 && ans<=29.9){
+    document.getElementById("display").innerText=bag3
+
+}
+else if(ans>=30){
+    document.getElementById("display").innerText=bag4
+
+}
+
+
+
+}
+
+
+
+</script>
+
+</html>

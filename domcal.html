@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="display"></h1>
+
+<div id="btn">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>0</button>
+</div>
+
+<div id="operat">
+    <button>+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button>
+
+</div>
+
+<div id="equal">
+    <button>=</button>
+</div>
+</body>
+
+<script>
+
+let disp=document.getElementById("display")
+let btn=document.querySelectorAll("#btn>button")
+let oper=document.querySelectorAll("#operat> button")
+let equals=document.getElementById("equal")
+
+bag1=""
+bag2=""
+res=""
+ans=true
+for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener("click", function () {
+
+        if(ans==true){
+            bag1+=btn[i].innerText
+            disp.innerText=bag1
+        }
+        else{
+            bag2+=btn[i].innerText
+            disp.innerText=bag2
+        }
+       
+    });
+}
+
+for(let i=0;i<oper.length;i++){
+    oper[i].addEventListener("click",function(){
+        ans=false
+        res+=oper[i].innerText
+    })
+
+}
+
+function calculates(bag1,bag2,res){
+
+    switch(res)
+    {
+        case "+":
+            return Number(bag1)+Number(bag2)
+        
+            case "-":
+                return Number(bag1)-Number(bag2)
+             
+                case "*":
+                    return Number(bag1)*Number(bag2)
+
+                    case "/":
+                        return Number(bag1)/Number(bag2)
+    }
+
+}
+
+equals.addEventListener("click",function(){
+
+    disp.innerText=calculates(bag1,bag2,res)
+})
+
+
+
+</script>
+
+
+</html>
