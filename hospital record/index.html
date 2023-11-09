@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT-WEB-05 C2</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Dont make any changes here -->
+    <h1>Hospital - Doctor Records</h1>
+
+    <div>
+      <!-- ***** We are using form here  ****  -->
+      <form>
+        <label for="">Doctor Name</label><br />
+        <input id="name" type="text" placeholder="Enter Doctor Name" /><br />
+        <label for="">Doctor ID</label><br />
+        <input
+          id="docID"
+          type="number"
+          placeholder="Enter Doctor ID"
+        /><br />
+        <label for="">Specialization </label><br />
+        <select id="dept">
+          <option value="">Select Specialization</option>
+          <option value="Dermatologist">Dermatologist</option>
+          <option value="ENT">ENT</option>
+          <option value="Dentist">Dentist</option>
+          <option value="COVID">COVID</option>
+          <option value="Gynecologist">Gynecologist</option></select
+        ><br />
+        <label for="">Experience </label><br />
+        <input id="exp" type="number" placeholder="Experience in Years" /><br />
+        <label for="">Email Address </label><br />
+        <input type="text" id="email" placeholder="Enter Email Address" /><br />
+        <label for="">Mobile Number </label><br />
+        <input id="mbl" type="number" placeholder="Enter Mobile number" /><br />
+        <input type="submit" />
+      </form>
+      <table>
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Doctor ID</th>
+            <th>Specialization</th>
+            <th>Experience in years</th>
+            <th>Email address</th>
+            <th>Mobile Number</th>
+            <th>Role</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ******* Append your output here ********* -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+
+<script>
+
+
+let myform=document.querySelector("form")
+let tbody=document.querySelector("tbody")
+let docname=document.getElementById("name")
+let docid=document.getElementById("docID")
+let specl=document.getElementById("dept")
+let exp=document.getElementById("exp")
+let email=document.getElementById("email")
+let mobnum=document.getElementById("mbl")
+
+
+myform.addEventListener("submit",function(e){
+e.preventDefault()
+
+
+let arr=[]
+let data={
+  myform:myform.value,
+  docname:docname.value,
+  docid:docid.value,
+  specl:specl.value,
+  exp:exp.value,
+  email:email.value,
+  mobnum:mobnum.value
+}
+
+if (data.exp > 5) {
+          data.role = "Senior";
+        } else if (data.exp >= 2 && data.exp <= 5) {
+          data.role = "Junior";
+        } else {
+          data.role = "Trainee";
+        }
+
+
+
+
+
+
+arr.push(data)
+
+tbody.innerHTML=""
+
+
+for(let i=0;i<arr.length;i++){
+
+  let tr=document.createElement("tr")
+
+let td2=document.createElement("td")
+let td3=document.createElement("td")
+let td4=document.createElement("td")
+let td5=document.createElement("td")
+let td6=document.createElement("td")
+let td7=document.createElement("td")
+let td8=document.createElement("td")
+
+
+td2.innerText=arr[i].docname
+td3.innerText=arr[i].docid
+td4.innerText=arr[i].specl
+td5.innerText=arr[i].exp
+td6.innerText=arr[i].email
+td7.innerText=arr[i].mobnum
+td8.innerText=arr[i].role
+
+
+tbody.append(tr)
+tr.append(td2,td3,td4,td5,td6,td7,td8)
+
+}
+
+})
+
+
+
+</script>
+
+</html>
+
+<script src="index.js"></script>
