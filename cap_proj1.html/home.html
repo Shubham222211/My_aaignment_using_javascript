@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;padding: 0;
+        }
+
+        .first {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(4, 73, 4);
+            /* border: 1px solid blanchedalmond; */
+
+        }
+
+        .first p {
+            font-size: 16px;
+            color: white;
+            font-weight:500;
+        }
+
+        .first a {
+            color: #006eff;
+            font-size: 18px;
+        }
+
+
+
+/* *********************************************************************************************************************************** */
+
+
+.sephora{
+    /* border: 1px solid black; */
+    height: 85px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 18px;
+}
+
+
+.sephora1{
+    /* border: 1px solid red; */
+    height: 70px;
+    width: 500px;
+    margin-left: 40px;
+}
+.sephora1{
+    display: flex;
+}
+.sephora1 input{
+    height: 30px;
+    width:500px ;
+    border-radius: 20px;
+    margin-top: 18px;
+    margin-left: 25px;
+}
+.sephora h1{
+    font-size: 25px;
+    font-style:unset;
+    font-weight: 100;
+    
+}
+
+.sephora2{
+    /* border: 1px solid yellow; */
+    height: 70px;
+    width: 200px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.sephora2 img{
+    width: 35px;
+    height: 35px;
+    /* padding-top: 17px; */
+}
+.sephora3{
+    /* border: 1px solid rgb(141, 141, 10); */
+    height: 70px;
+    width: 150px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.sephora3 img{
+    width: 35px;
+    height: 35px;
+    /* padding-top: 17px;    */
+
+}
+
+.sephora3 p{
+    padding-top: 11px;
+}
+
+.sephora4{
+    /* border: 1px solid rgb(141, 141, 10); */
+    height: 70px;
+    width: 170px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.sephora4 img{
+    width: 35px;
+    height: 35px;
+    /* padding-top: 17px; */
+
+}
+
+.sephora5{
+    /* border: 1px solid rgb(56, 10, 141); */
+    height: 70px;
+    width: 150px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.sephora5 a img{
+    width: 35px;
+    height: 35px;
+    /* padding-top: 17px; */
+
+}
+
+/* ****************************************************************************************************************************************** */
+
+.navbar {
+            /* border: 1px solid green; */
+            width: 100%;
+            height: 3px;
+            background:rgb(224, 35, 35);
+
+        }
+
+        .nav1 {
+            /* border: 1px solid red; */
+            height: 40px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+            background:black;
+        }
+
+        .nav1 a:hover{
+          color: greenyellow;
+          font-weight: 600;
+
+        }
+
+
+        .nav1 a {
+            text-decoration: none;
+            color: white;
+            font-weight: 100;
+            font-size: 14px;
+        }
+
+        .container button{
+            background-color: rgb(245, 101, 125);
+            color: white;
+            border-radius: 15px;
+        }
+
+        /********************************************************************************************************************************  */
+    .slideshow-container {
+      width: 900px;
+      position: relative;
+      margin: auto;
+      margin-top: 50px;
+
+    }
+    .slideshow-container img {
+      width: 100%;
+      display: none;
+    }
+    .slideshow-container img.active {
+      display: block;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* ********************************************************************************************************************************** */
+
+    .container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 5px;
+        }
+
+        
+
+        .container img {
+            width: 100%;
+            
+        }
+
+        .thrdimg{
+            /* border: 1px solid black; */
+            display: flex;
+            justify-content: space-evenly;
+            width: 95%;
+            height: 360px;
+            margin: auto;
+            margin-top: 40px;
+            
+
+        }
+
+        
+        .thrdimg1{
+            /* border: 1px solid black; */
+            
+            width: 400px;
+            height: 360px;
+            /* background-color: rgb(204, 70, 70); */
+            color: black;
+            
+
+        }
+        .thrd1{
+
+            /* border: 1px solid black; */
+            
+            width: 400px;
+            height: 70px;
+            line-height: 3px; 
+        }
+        .third1 img{
+           max-width: 100%;
+        }
+        /* **************************************************************** */
+
+        
+        .footer {
+            width: 100%;
+            /* height: 500px; */
+
+            /* border: 1px solid blue; */
+            justify-content: center;
+            align-items: center;
+            margin-top: 90px;
+            background: #f5f4f4;
+
+
+
+
+        }
+
+        .para {
+            width: 74%;
+            /* border: 1px solid blueviolet; */
+            margin-left: 160px;
+            color: #757474;
+
+        }
+
+        .para p {
+            line-height: 25px;
+        }
+
+        .data{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            width: 76%;
+            gap: 10px;
+            margin-left: 160px;
+            margin-top: 20px;
+            list-style-type: none;
+            
+        }
+        .list{
+          
+            width: 200px;
+           
+            /* border: 1px solid gold; */
+        }
+
+        .list a{
+            text-decoration: none;
+            line-height: 27px;
+            font-size: 18px;
+            color: #757474;
+          
+        }
+
+        img{
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="first">
+        <p>Up to 3 FREE fragrance minis with $45, or $75, or $105* purchase. Use code MORESCUENTS4U. *Terms apply.</p>
+        <a href="">SHOP NOW ></a>
+
+    </div>
+
+
+
+
+    <div class="sephora">
+        <div class="sephora1">
+            <h1>SEPHORA</h1>
+            <input type="Search" name="Search">
+        </div>
+        <div class="sephora2">
+<a href="https://www.sephora.com/happening/services"><img src="https://cdn.vectorstock.com/i/1000x1000/46/71/store-black-icon-shop-and-retail-symbol-vector-27294671.webp" alt=""></a>
+            <p>Stores & Services <br>Choose your Store</p>
+        </div>
+        <div class="sephora3">
+            <a href="https://community.sephora.com/"><img src="https://cdn.vectorstock.com/i/1000x1000/09/26/high-quality-people-logo-family-or-community-vector-10780926.webp" alt=""></a>
+            <p>Community</p>
+        </div>
+
+        <div class="sephora4">
+           <a href="signup.html"> <img src="https://www.sephora.com/img/ufe/icons/me-active.svg" alt=""></a>
+            <p>Sign In <br>for FREE Shopping</p>
+        </div>
+
+        <div class="sephora5">
+            <a href=""><img src="https://cdn-icons-png.flaticon.com/512/641/641306.png" alt=""></a>
+            <a href=""><img src="https://logowik.com/content/uploads/images/like-heart2255.logowik.com.webp" alt=""></a>
+            <a href="./cart.html"><img src="https://cdn4.vectorstock.com/i/1000x1000/10/08/shopping-cart-black-icon-on-white-background-vector-31701008.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+    
+    <div class="navbar">
+
+        <div class="nav1">
+            <a href="./login.html">Log In</a>
+            <a href="https://www.sephora.com/brands-list">Brands</a>
+            <a href="https://www.sephora.com/shop/makeup-cosmetics">MakeUp</a>
+            <a href="https://www.sephora.com/shop/skincare">Skin Care</a>
+            <a href="https://www.sephora.com/shop/hair-products">Hair</a>
+            <a href="https://www.sephora.com/shop/fragrance">Fragrance</a>
+            <a href="https://www.sephora.com/shop/makeup-tools">Tools & Brushes</a>
+            <a href="https://www.sephora.com/shop/bath-body">Bath & Body</a>
+            <a href="https://www.sephora.com/shop/travel-size-toiletries">Mini Size</a>
+            <a href="https://www.sephora.com/shop/gifts">Gifts & Gifts Card</a>
+            <a href="https://www.sephora.com/shop/gifts">Beauty Under $20</a>
+            <a href="https://www.sephora.com/shop/gifts">Sale & Offer</a>
+        </div>
+    </div>
+
+    
+
+
+  
+<div class="slideshow-container">
+    <img class="slides active" src="https://www.sephora.com/contentimages/homepage/102423/2023-11-13-slotting-value-size-site-home-page-RWD-hero-banner-1200x800-US-handoff_01-2000x2000.jpeg?imwidth=545" alt="Image 1">
+    <img class="slides" src="https://www.sephora.com/contentimages/homepage/102423/2023-11-10-slotting-just-arrived-v4-standard-site-rwd-home-page-hero-banner-4-product-english-US-CA-handoff_01-2000x2000.jpeg?imwidth=545" alt="Image 2">
+    <img class="slides" src="https://www.sephora.com/contentimages/2023-q4-fragrance-site-desktop-mobile-rwd-hero-banner-US-image-only-2850-release.jpg?imwidth=545" alt="Image 3">
+    <img class="slides" src="https://www.sephora.com/contentimages/2023-11-02-slotting-luxe-site-rwd-home-page-hero-banner-4-product-english-US-handoff_01.jpg?imwidth=545" alt="">
+    <img class="slides" src="https://www.sephora.com/contentimages/2023-fragrance-q4-site-home-page-hero-banner-CHANEL-us-2868-image-only.jpg?imwidth=545" alt="">
+  
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+
+</div>
+
+<!-- *************************************************************************************************************************************** -->
+
+<div class="chosen">
+    <h2>Choosen for you</h2>
+
+  
+    <div class="navbar">
+        
+        <div class="options">
+            
+            <!-- <a href="./cart.html">Cart</a> -->
+        </div>
+    </div>
+    <select id="filter">
+        <option value="">Select Brand</option>
+        <option value="Olaplex">Olaplex</option>
+        <option value="Huda Beauty">Huda Beauty</option>
+        <option value="KVD Beauty">KVD Beauty</option>
+        <option value="Gisou">Gisou</option>
+    </select>
+    <div class="container"></div>
+
+
+
+    <div class="thrdimg">
+        <div class="thrdimg1">
+            <img src="https://www.sephora.com/contentimages/homepage/102423/2023-11-13-trending-lip-treatments-site-desktop-home-page-rwd-marketing-banner-800x534-en-us-can-2000x2000.jpeg?imwidth=400" alt="">
+            <div class="thrd1">
+                <h3>Trending Lip Care</h3>
+                <p>Brands on a mission to your skin and mission</p>
+                <a href="">Learn More</a>
+            </div>
+        </div>
+        <div class="thrdimg1">
+            <img src="https://www.sephora.com/contentimages/2023-holiday-launch-site-desktop-mobile-home-page-rwd-marketing-banner-ec-2853-release-us-can-image-only.jpg?imwidth=400" alt="">
+            <div class="thrd1">
+                <h3>Trending Lip Care</h3>
+                <p>Brands on a mission to your skin and mission</p>
+                <a href="">Learn More</a>
+            </div>
+        </div>
+        <div class="thrdimg1">
+            <img src="https://www.sephora.com/contentimages/2023-06-02-RWD-homepage-site-desktop-mobile-home-page-marketing-banner-800x534-clean-plus-release.jpg?imwidth=400" alt="">
+            <div class="thrd1">
+                <h3>Trending Lip Care</h3>
+                <p>Brands on a mission to your skin and mission</p>
+                <a href="">Learn More</a>
+            </div>
+        </div>
+        
+    </div>
+<!-- ******************************************************************* -->
+    
+    
+    
+
+    <div id = "slideshow"></div>
+
+    <div class="footer">
+
+        <div class="para">
+            <p>1.Sephora was first launched in Paris in August 1970. It was acquired by Dominique Mandonnaud in 1993, who merged the purchase with his own perfume chain under the Sephora brand. Mandonnaud is credited for designing and executing Sephora's "assisted self-service" sales experience, which separated itself from standard retail models for cosmetics by encouraging customers (girls & women) to test products in retail locations before purchasing.[9][10] <br>
+
+                Mandonnaud continued to expand the Sephora brand through the 1990s, opening up its flagship store in Champs Élysées in 1997. In July 1997, Mandonnaud and his partners sold Sephora to LVMH, who expanded the stores globally and bolstered the chain's products to include beauty and cosmetic products.[6] Sephora extended its operation to the Middle Eastern markets in 2007 and has opened over 44 Sephora UAE and KSA stores as well as an eCommerce store.[11][12] It extends its partnership with its exclusive brands in the <region class="" 11=""></region>
+                <br>
+                
+                On 1 January 2014, Calvin McDonald replaced David Suliteanu as president and chief executive officer of Sephora Americas. Suliteanu was named CEO of Kendo Brands, another business in the LVMH portfolio.[13] <br>
+                
+                Sephora opened its first United States store in New York City in 1998, its first Canadian store in Toronto in 2004 and the first Australian Sephora store in 2014.[14][15] Its North American headquarters is located in New York City, with corporate offices in San Francisco and Montréal. Sephora currently operates over 430 stores across North America.[16]</p><br>
+
+            <p>
+                2. Compared to AirPods Pro (1st generation).<br><br>
+                To listen to music on Apple Music Classical, you must have an internet connection.<br><br>
+                To access and use all the features of Sephora Card, you must add Apple Card to Wallet on an iPhone or iPad
+                with the latest version of iOS or iPadOS. Update to the latest version by going to Settings > General >
+                Software Update. Tap Download and Install.<br><br>
+                Available for qualifying applicants in the United States.<br><br>
+                Sephora Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.<br><br>
+                Learn more about how Sephora Card applications are evaluated at support.sephora.com/kb/HT209218.<br>
+                <hr>
+            </p>
+
+        </div>
+        <div class="data">
+<div class="list">
+
+    <ul>
+        <li><h4>Shop and learn</h4></li>
+        <li> <a href="">store </a></li>
+        <li> <a href="">about sephora</a></li>
+        <li> <a href="">careers</a></li>
+        <li> <a href="">sephora values</a></li>
+        <li> <a href="">affiliates</a></li>
+        <li> <a href="">Sephora Events</a></li>
+        <li> <a href="">Air Bag</a></li>
+        <li> <a href="">Gift Cards</a></li>
+        <li> <a href="">Global sites</a></li><br>
+        <li><h4>Shop and learn</h4></li>
+        <li> <a href="">Sephora Beauty</a></li>
+        <li> <a href="">Sephora Card</a></li>
+        <li> <a href="">Sephora Pay</a></li>
+        <li> <a href="">Sephora Accelerate</a></li>
+
+        <li> <a href="">Delivery</a></li>
+        <li> <a href="">Shipping</a></li>
+        <li> <a href="">Billing</a></li>
+        <li> <a href="">Online Ordering</a></li>
+    </ul>
+    <a href=""></a>
+</div>
+
+
+
+
+<div class="list">
+
+    <ul>
+        <li><h4>Shop and learn</h4></li>
+        <li> <a href="">Sephora Beauty</a></li>
+        <li> <a href="">Sephora Card</a></li>
+        <li> <a href="">Sephora Pay</a></li><br>
+
+        <li><h4>Shop and learn</h4></li>
+        <li> <a href="">store </a></li>
+        <li> <a href="">about sephora</a></li>
+        <li> <a href="">careers</a></li>
+        <li> <a href="">sephora values</a></li>
+        <li> <a href="">affiliates</a></li>
+        <li> <a href="">Sephora Events</a></li>
+        <li> <a href="">Air Bag</a></li>
+        
+    </ul>
+   
+</div>
+
+
+
+<div class="list">
+
+    <ul>
+        <li><h4>Shop and learn</h4></li>
+        <li> <a href="">store </a></li>
+        <li> <a href="">about sephora</a></li>
+        <li> <a href="">careers</a></li>
+        <li> <a href="">sephora values</a></li>
+        <li> <a href="">affiliates</a></li>
+        <li> <a href="">Sephora Events</a></li>
+        <li> <a href="">Air Bag</a></li>
+       <li> <a href="">Accessories</a></li><br>
+        <li><h4>Shop and learn</h4></li>
+
+        <li> <a href="">Wallet</a></li>
+        <li> <a href=""> Card</a></li>
+        <li> <a href=""> Pay</a></li>
+        <li> <a href=""> Cash</a></li>
+    </ul>
+    
+</div>
+
+<div class="list">
+
+    <ul>
+        <li><h4>Shop and learn</h4></li>
+        <li> <a href="">store </a></li>
+        <li> <a href="">about sephora</a></li>
+        <li> <a href="">careers</a></li>
+        <li> <a href="">sephora values</a></li>
+        <li> <a href="">affiliates</a></li>
+        <li> <a href="">Sephora Events</a></li>
+        <li> <a href="">Air Bag</a></li>
+       <br>
+        <li><h4>Shop and learn</h4></li>
+
+        <li> <a href="">Wallet</a></li>
+        <li> <a href=""> Card</a></li>
+        <li> <a href=""> Pay</a></li>
+        <li> <a href="">Cash</a></li>
+    </ul>
+    <a href=""></a>
+</div>
+<div class="list">
+
+    <ul>
+        <li><h4>Shop and learn</h4></li>
+        <li> <a href="">store </a></li>
+        <li> <a href="">about sephora</a></li>
+        <li> <a href="">careers</a></li>
+        <li> <a href="">sephora values</a></li>
+        <li> <a href="">affiliates</a></li>
+        <li> <a href="">Sephora Events</a></li>
+        <li> <a href="">Air Bag</a></li>
+       <br>
+        <li><h4>Shop and learn</h4></li>
+        <li> <a href="">store </a></li>
+        <li> <a href="">about sephora</a></li>
+        <li> <a href="">careers</a></li>
+        <li> <a href="">sephora values</a></li>
+        <li> <a href="">affiliates</a></li>
+        <li> <a href="">Sephora Events</a></li>
+        <li> <a href="">Air Bag</a></li>
+       
+    </ul>
+    <a href=""></a>
+</div>
+        </div><hr>
+
+
+
+
+
+        
+
+    </div>
+
+</body>
+
+
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+  
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+  
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+  
+    function showSlides(n) {
+      let i;
+      const slides = document.getElementsByClassName("slides");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+      slides[slideIndex - 1].classList.add('active');
+    }
+    // ***************************************************************************************************************************************
+
+
+    const PRODUCT_DATA = [
+        {
+            brand: "KVD Beauty",
+            name: "Tatoo Duo eyeliner set in bulk",
+            price: "$ 200.00",
+            img: "https://www.sephora.com/productimages/sku/s2716314-main-zoom.jpg?imwidth=166",
+        },
+        {
+            brand: "KVD Beauty",
+            name: "Tatoo liner Vegan water proof liquid eyeliner",
+            price: "$ 30.00",
+            
+            
+            img: "https://www.sephora.com/productimages/sku/s1177567-main-zoom.jpg?imwidth=166",
+        },
+        {
+            brand: "KVD Beauty",
+            name: "queen of poisions full size vegan liner",
+            price: "$ 18.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2716306-main-zoom.jpg?imwidth=166",
+        },
+        {
+            brand: "Gisou",
+            name: "Honey InfusedHydrating Lip oil",
+            price: "$ 98.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2641942-main-zoom.jpg?imwidth=166",
+        },
+        {
+            brand: "Rare Beauty",
+            name: "Positive light liquid luminizer highlight",
+            price: "$ 85.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2362168-main-zoom.jpg?imwidth=166",
+        },
+        {
+            brand: "KVD Beauty",
+            name: "Tatoo pencil eye liner set duo",
+            price: "$ 79.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2518421-main-zoom.jpg?imwidth=166",
+        },
+        {
+            brand: "Olaplex",
+            name: "Mini Contour,Highlight & Blush Trio",
+            price: "$ 20.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2718112-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=166",
+        },
+        {
+            brand: "Gisou",
+            name: "Classic Beauty Advent Calendar",
+            price: "$ 47.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2710259-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=166",
+        },
+        {
+            brand: "Gisou",
+            name: "Eyes eyeshadow Paltte waterproof",
+            price: "$ 76.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2699742-main-zoom.jpg?imwidth=166",
+        },
+        {
+            brand: "KVD Beauty",
+            name: "Tatto Duo Waterproof Vegan Eyeliner set",
+            price: "$ 45.00",
+          
+            img: "https://www.sephora.com/productimages/sku/s2599660-main-zoom.jpg?imwidth=166"
+        },
+        {
+            brand: "KVD Beauty",
+            name: "Tatoo duo waterproof eyeliner set",
+            price: "$ 20.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2716314-main-zoom.jpg?imwidth=166",
+        },
+        {
+            brand: "Gisou",
+            name: "iNNBEAUTY PROJECT Lip oil set",
+            price: "$ 67.00",
+           
+            img: "https://www.sephora.com/productimages/sku/s2714517-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=166",
+        },
+        {
+            brand: "Olaplex",
+            name: "Hyderate,smooth,protect set beauty",
+            price: "$ 65.00",
+         
+            img: "https://www.sephora.com/productimages/sku/s2698504-main-zoom.jpg?imwidth=250",
+        },
+        {
+            brand: "Olaplex",
+            name: "Living proof hair serum branded",
+            price: "$ 90.00",
+           
+            img: "https://www.sephora.com/productimages/sku/s2688489-main-zoom.jpg?imwidth=250",
+        },
+        {
+            brand: "Huda Beauty",
+            name: "Mini Nude Venus Lip Trio:Mattetrance",
+            price: "$ 47.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2714608-main-zoom.jpg?imwidth=250",
+        },
+        {
+            brand: "Huda Beauty",
+            name: "Pretty GrungeEyeshadow palette",
+            price: "$ 79.00",
+          
+            img: "https://www.sephora.com/productimages/sku/s2691350-main-zoom.jpg?imwidth=250",
+        },
+        {
+            brand: "Huda Beauty",
+            name: "Mini Skine Divine powder blush",
+            price: "$ 20.00",
+            img: "https://www.sephora.com/productimages/sku/s2718831-main-zoom.jpg?imwidth=250",
+            
+        },
+        {
+            brand: "Olaplex",
+            name: "Mini candle sampler set beauty",
+            price: "$46.00",
+            img:"https://www.sephora.com/productimages/sku/s2694305-main-zoom.jpg?imwidth=250",
+            
+        },
+        {
+            brand: "Olaplex",
+            name: "Tower 28 Beauty",
+            price: "$ 79.00",
+            img:"https://www.sephora.com/productimages/sku/s2714459-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=250"
+         
+        },
+        {
+            brand: "Gisou",
+            name: "Vitamin Brightening Trio set",
+            price: "$ 20.00",
+            img:"https://www.sephora.com/productimages/sku/s2715092-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=250"
+            
+        },
+        {
+            brand: "Olaplex",
+            name: "Essence Absolute pre shampoo",
+            price: "$ 13.00",
+            
+            img: "https://www.sephora.com/productimages/sku/s2697431-main-zoom.jpg?imwidth=250",
+        },
+        {
+            brand: "Huda Beauty",
+            name: "Mini countour Hogh light",
+            price: "$ 76.00",
+          
+            img: "https://www.sephora.com/productimages/sku/s2710259-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=250",
+        },
+        {
+            brand: "Huda Beauty",
+            name: "Eros Gift Set",
+            price: "$ 56.00",
+         
+            img: "https://www.sephora.com/productimages/sku/s2719086-main-zoom.jpg?imwidth=250"
+        },
+        {
+            brand: "Olaplex",
+            name: "woman cotton off white",
+            price: "$ 86.00",
+        
+            img: "https://www.sephora.com/productimages/sku/s2653327-main-zoom.jpg?imwidth=250",
+        },
+        {
+            brand: "KVD Beauty",
+            name: "Tom Ford  Beauty set",
+            price: "$ 67.00",
+         
+            img: "https://www.sephora.com/productimages/sku/s2714855-main-zoom.jpg?imwidth=250",
+        },
+    ];
+
+    const container = document.querySelector(".container");
+    const filter = document.querySelector("#filter");
+
+    let LSData = localStorage.getItem("cart");
+
+    if (LSData === null) {
+        LSData = [];
+    } else {
+        LSData = JSON.parse(LSData);
+    }
+
+
+    filter.addEventListener("change", function () {
+        if (filter.value === "") {
+            Display(PRODUCT_DATA);
+        } else {
+            let filtered = PRODUCT_DATA.filter(function (element) {
+                if (element.brand === filter.value) {
+                    return true;
+                } else {
+                    return false;
+                }
+            })
+            Display(filtered);
+        }
+    })
+
+
+
+    Display(PRODUCT_DATA);
+    
+    function Display(data) {
+        
+        container.innerHTML = "";
+        for (let i = 0; i < data.length; i++) {
+            const product = document.createElement("div");
+
+            const image = document.createElement("img");
+            image.setAttribute("src", data[i].img);
+
+            const name = document.createElement("p");
+            name.innerText = data[i].name;
+
+            const price = document.createElement("h4");
+            price.innerText = data[i].price;
+            if (data[i].price >= 1000) {
+                price.style.color = "red";
+            }
+
+
+            const brand = document.createElement("p");
+            brand.innerText = data[i].brand;
+
+
+           
+
+            const addToCart = document.createElement("button");
+            addToCart.innerText = "Add To Bag";
+            
+            addToCart.addEventListener("click", function () {
+                LSData.push(data[i]);
+                alert("Go To Bag")
+                addToCart.style.color="white"
+                addToCart.style.backgroundColor="green"
+                localStorage.setItem("cart", JSON.stringify(LSData));
+            })
+
+            product.append(image, name, price, brand,addToCart);
+            container.append(product);
+        }
+
+    }
+
+  </script>
+</html>
