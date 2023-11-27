@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function Vehicle() {
+    this.speed = 0;
+}
+
+Vehicle.prototype.accelerate = function () {
+    this.speed += 10;
+    console.log("Vehicle is accelerating. Speed: " + this.speed);
+};
+
+Vehicle.prototype.brake = function () {
+    this.speed -= 5;
+    console.log("Vehicle is braking. Speed: " + this.speed);
+};
+
+Vehicle.prototype.refuel = function () {
+    console.log("Vehicle is refueling.");
+};
+
+
+function Car() {
+    Vehicle.call(this); 
+    this.numberOfWheels = 4;
+}
+
+
+Object.setPrototypeOf(Car.prototype, Vehicle.prototype);
+
+
+Car.prototype.honk = function () {
+    console.log("Honk! Honk!");
+};
+
+
+function Airplane() {
+    Vehicle.call(this); 
+    this.numberOfEngines = 2;
+    this.hasLandingGear = true;
+}
+
+Object.setPrototypeOf(Airplane.prototype, Vehicle.prototype);
+
+
+Airplane.prototype.takeOff = function () {
+    console.log("Airplane is taking off.");
+};
+
+
+const myCar = new Car();
+const myAirplane = new Airplane();
+
+
+myCar.accelerate();  
+myCar.brake();       
+myCar.refuel();      
+myCar.honk();        
+
+myAirplane.accelerate();  
+myAirplane.brake();       
+myAirplane.refuel();      
+myAirplane.takeOff();     
+
+
+
+</script>
+</html>

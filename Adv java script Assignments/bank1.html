@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+function BankAccount(accountNumber, name, type, balance){
+
+this.accountNumber=accountNumber,
+this.name=name,
+this.type=type,
+this.balance=balance,
+this.active=true
+}
+
+
+BankAccount.prototype.deposit=function(amount){
+
+    if(amount>0){
+        this.balance+=amount
+        console.log(`deposted ${amount}`)
+    }
+    else{
+        console.log("Invalid")
+    }
+}
+
+
+BankAccount.prototype.withdraw=function(amount){
+    if(this.balance>0 && amount>0){
+        this.balance-=amount
+
+        console.log(`withdraw ${amount}`)
+    }
+    else{
+        console.log(`insufficient balance `)
+    }
+}
+
+
+BankAccount.prototype.checkBalance=function(){
+    console.log(`Total Blance is ${this.balance}`)
+}
+
+BankAccount.prototype.checkactive=function(){
+    return this.active
+}
+
+const account2 = new BankAccount(2, "Jane Doe", "Checking", 500);
+const account1 = new BankAccount(1, "John Doe", "Savings", 1000);
+
+account1.deposit(200);
+// account1.checkBalance();
+account1.withdraw(50);
+account1.checkBalance();
+
+account2.deposit(300);
+// account2.checkBalance();
+account2.withdraw(200);
+account2.checkBalance();
+
+</script>
+</html>

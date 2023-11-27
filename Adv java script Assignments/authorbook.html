@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+function book(title, author, genre, price){
+
+    this.title=title,
+    this.author=author,
+    this.genre=genre,
+    this.price=price
+
+}
+
+function author(name, birthYear,nationality){
+
+    this.name=name,
+    this.birthYear=birthYear,
+    this.nationality=nationality
+}
+
+book.prototype.getbookinfo=function(){
+
+    console.log(`title ${this.title}`)
+    console.log(`Author ${this.author.name}`)
+    console.log(`Genre ${this.genre}`)
+    console.log(`Price ${this.price}`)
+}
+
+
+const author1 = new author('J.K. Rowling', 1965);
+const author2 = new author('George Orwell', 1903);
+
+const book1 = new book('Harry Potter and the Sorcerer', author1, 'Fantasy', 20.99);
+const book2 = new book('1984', author2, 'Dystopian', 15.99);
+
+// Displaying book details
+book1.getbookinfo();
+book2.getbookinfo();
+
+</script>
+</html>
