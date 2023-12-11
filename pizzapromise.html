@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>order</button>
+    <img src="https://media.post.rvohealth.io/wp-content/uploads/2021/07/pizza-1200x628-facebook.jpg" alt="">
+    <script>
+        let orderbtn = document.querySelector("button");
+        let imag = document.querySelector("img");
+        let iforder = false;
+
+        orderbtn.addEventListener("click", function () {
+            let prom = new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    if (iforder) {
+                        resolve();
+                    } else {
+                        reject("Sorry, Out Of Stock");
+                    }
+                }, 3000);
+            });
+
+            prom.then(function () {
+            
+                imag.src = "https://media.post.rvohealth.io/wp-content/uploads/2021/07/pizza-1200x628-facebook.jpg";
+            })
+            .catch(function (error) {
+                alert(error)
+            });
+        });
+    </script>
+</body>
+</html>
