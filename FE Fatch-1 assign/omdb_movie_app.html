@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Search</h1>
+        <div class="search-container">
+            <input type="text" id="movieInput" placeholder="Enter movie title...">
+            <button id="searchBtn">Search</button>
+        </div>
+        <div id="movieResults" class="results-container"></div>
+    </div>
+
+    
+</body>
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const searchBtn = document.getElementById('searchBtn');
+    searchBtn.addEventListener('click', searchMovie);
+});
+
+function searchMovie() {
+    const movieInput = document.getElementById('movieInput');
+    const movieTitle = movieInput.value.trim();
+
+    if (movieTitle === '') {
+        alert('Please enter a movie title.');
+        return;
+    }
+
+    const apiUrl = `https://www.omdbapi.com/?apikey=YOUR_API_KEY&t=${encodeURIComponent(movieTitle)}`;
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => displayMovie(data))
+        .catch(error => console.error('Error:', error));
+}
+
+function displayMovie(movieData) {
+    const movieResults = document.getElementById('movieResults');
+    movieResults.innerHTML = '';
+
+    if (movieData.Response === 'True') {
+        const movieCard = document.createElement('div');
+        movieCard.classList.add('movie-card');
+
+        const title = document.createElement('h3');
+        title.textContent = movieData.Title;
+
+        const year = document.createElement('p');
+        year.textContent = `Year: ${movieData.Year}`;
+
+        const genre = document.createElement('p');
+        genre.textContent = `Genre: ${movieData.Genre}`;
+
+        const poster = document.createElement('img');
+        poster.src = movieData.Poster;
+        poster.alt = movieData.Title;
+
+        movieCard.appendChild(title);
+        movieCard.appendChild(year);
+        movieCard.appendChild(genre);
+        movieCard.appendChild(poster);
+
+        movieResults.appendChild(movieCard);
+    } else {
+        const errorMessage = document.createElement('p');
+        errorMessage.textContent = 'Movie not found. Please try another title.';
+        errorMessage.style.color = 'red';
+        movieResults.appendChild(errorMessage);
+    }
+}
+
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage practice</title>
+</head>
+<body>
+    <input type="text" name="" id="name">
+    <input type="number" name="" id="age">
+    <button id="submitBtn">Submit</button>
+    <button id="retrieveBtn">Retrieve</button>
+    <div id="display"></div>
+
+    <script>
+        let nam = document.querySelector("#name");
+        let age = document.querySelector("#age");
+        let submitBtn = document.querySelector("#submitBtn");
+        let retrieveBtn = document.querySelector("#retrieveBtn");
+        let display = document.querySelector("#display");
+
+        submitBtn.addEventListener("click", function() {
+            let user = {
+                name: nam.value,
+                age: age.value,
+            };
+
+            display.innerHTML = `Name: ${user.name}, Age: ${user.age}`;
+
+            localStorage.setItem("user", JSON.stringify(user));
+        });
+
+        retrieveBtn.addEventListener("click", function() {
+            let storedUser = localStorage.getItem("user");
+
+            if (storedUser) {
+                let user = JSON.parse(storedUser);
+
+                
+                display.innerHTML = `
+                    <table border="1">
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>${user.name}</td>
+                            <td>${user.age}</td>
+                        </tr>
+                    </table>
+                `;
+            } else {
+                alert("No data stored. Please submit the form first.");
+            }
+        });
+    </script>
+</body>
+</html>
